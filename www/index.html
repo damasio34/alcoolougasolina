@@ -52,6 +52,8 @@
           Calcular
         </button>
         
+        <!-- ToDo: Colocar em outra view -->
+        
         <div class="list">
           <span class="item item-icon-left">
             <i class="icon ion-email"></i>
@@ -64,25 +66,25 @@
           </span>
         
           <span class="item item-icon-left item-icon-right">
-            <i class="icon ion-chatbubble-working"></i>
-            Cálculo de diferença:
-            <span class="item-note">{{Model.Diferenca.Preco}}</span>
+            <i class="icon ion-chatbubble-working"></i> Cálculo de diferença:
+            <span class="item-note">R$ {{Model.Diferenca.Preco}}</span>
           </span>
         
-          <span class="item item-icon-left" href="#">
-            <i class="icon ion-mic-a"></i>
-            Diferença na Km:
-            <span class="item-note">
-              {{Model.Diferenca.Consumo}}
-            </span>
+          <span class="item item-icon-left">
+            <i class="icon ion-mic-a"></i> Diferença na Km:
+            <span class="item-note">{{Model.Diferenca.Consumo}} Km</span>
           </span>
         
-          <span class="item item-divider" href="#">
-            Alcool
+          <span class="item item-divider">Alcool</span>
+          <span class="item item-icon-left">
+            <i class="icon ion-mic-a"></i> Preço por Km:
+            <span class="item-note">R$ {{Model.Alcool.PrecoKm}}</span>
           </span>
           
-          <span class="item item-divider" href="#">
-            Gasolina
+          <span class="item item-divider">Gasolina</span>
+          <span class="item item-icon-left">
+            <i class="icon ion-mic-a"></i> Preço por Km:
+            <span class="item-note">R$ {{Model.Gasolina.PrecoKm}}</span>
           </span>
         
         </div>

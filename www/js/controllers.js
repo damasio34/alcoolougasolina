@@ -7,10 +7,13 @@ angular.module("starter")
 		};
 		
 		$scope.calcular = function() {
-			$scope.Model.Diferenca.Preco = 'R$ ' + $scope.Model.Alcool.Preco / $scope.Model.Gasolina.Preco;
-			$scope.Model.Diferenca.Consumo = $scope.Model.Gasolina.Consumo - $scope.Model.Alcool.Consumo + ' Km';
+			$scope.Model.Diferenca.Preco = $scope.Model.Alcool.Preco / $scope.Model.Gasolina.Preco;
+			$scope.Model.Diferenca.Consumo = $scope.Model.Gasolina.Consumo - $scope.Model.Alcool.Consumo;
 			
-			$scope.Model.MelhorOpcaoPorCalculo = 
-			$scope.Model.MelhorOpcaoPorKmLitro = $scope.Model.Gasolina.Consumo - $scope.Model.Alcool.Consumo + ' Km';
+			$scope.Model.Alcool.PrecoKm = $scope.Model.Alcool.Preco / $scope.Model.Alcool.Consumo;
+			$scope.Model.Gasolina.PrecoKm = $scope.Model.Gasolina.Preco / $scope.Model.Gasolina.Consumo;
+			
+			$scope.Model.MelhorOpcaoPorCalculo = $scope.Model.Diferenca.Preco > 0.7 ? "Gasolina" : "Alcool"; 
+			$scope.Model.MelhorOpcaoPorKmLitro = $scope.Model.Alcool.PrecoKm <= $scope.Model.Gasolina.PrecoKm ? "Alcool" : "Gasolina";
 		}
 	});
