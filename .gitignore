@@ -2,7 +2,6 @@ platforms/
 plugins/
 
 node_modules/
-platforms/
 plugins/
 
 .vscode
